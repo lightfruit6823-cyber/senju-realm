@@ -1327,7 +1327,23 @@ async def slash_buycharacter(interaction: discord.Interaction, number: int):
     embed.set_image(url=character["image"])
     await interaction.response.send_message(embed=embed)
 
+from flask import Flask
+from threading import Thread
 
+app = Flask('')
+
+@app.route('/')
+def home():
+    return "Bot is alive!"
+
+def run():
+    app.run(host='0.0.0.0', port=10000)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+keep_alive()
 # ==================================================
 # RUN
 # ==================================================

@@ -233,14 +233,12 @@ guild_obj = discord.Object(id=GUILD_ID)
 @bot.event
 async def on_ready():
     try:
-        synced = await bot.tree.sync(guild=guild_obj)
-        print("━━━━━━━━━━━━━━━━━━━━━━")
-        print(f"🌌 Logged in as {bot.user}")
-        print(f"⚡ Synced {len(synced)} slash commands")
-        print("🌌 MongoDB Connected")
-        print("━━━━━━━━━━━━━━━━━━━━━━")
+        synced = await bot.tree.sync()
+        print(f"Synced {len(synced)} command(s)")
     except Exception as e:
-        print(f"❌ Sync error: {e}")
+        print(e)
+
+    print(f"Logged in as {bot.user}")
 
 
 @bot.event

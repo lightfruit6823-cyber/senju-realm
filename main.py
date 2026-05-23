@@ -16,10 +16,10 @@ from datetime import datetime, timedelta
 
 load_dotenv()
 
-TOKEN = os.getenv("TOKEN")
-MONGO_URI = os.getenv("MONGO_URI")
-OWNER_ID = int(os.getenv("OWNER_ID", "0"))
-GUILD_ID = int(os.getenv("GUILD_ID", "0"))
+TOKEN = os.getenv("MTQ5NjA0NjM0MzcyOTE4NDgyOA.GcYrF3.--UAX3ADfD7b6QadZ8o2PPGSIfsYlK9SXGahR4")
+MONGO_URI = os.getenv("mongodb+srv://lightfruit6823_db_user:5XKyNef5z3V4SX1Z@cluster0.iiuvcmz.mongodb.net/senjurealm?retryWrites=true&w=majority&appName=Cluster0")
+OWNER_ID = int(os.getenv("1304841548046929950"))
+GUILD_ID = int(os.getenv("1471386797551652918"))
 
 # ==================================================
 # KEEP ALIVE FOR RENDER
